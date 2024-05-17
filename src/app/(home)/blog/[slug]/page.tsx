@@ -24,7 +24,7 @@ export async function generateMetadata({
   const slug = await getPost(params.slug)
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? ''),
     title: `Blog - ${slug.title}`,
     openGraph: {
       description: slug.description,
